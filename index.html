@@ -28,7 +28,7 @@
    --trans: all 0.22s cubic-bezier(.4,0,.2,1);
  }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
 background: #090f18;
@@ -49,7 +49,7 @@ background: var(--navy-deep);
 border-radius: 40px;
 overflow: hidden;
 position: relative;
-box-shadow: 0 40px 120px rgba(0,0,0,.8), inset 0 0 0 1px rgba(255,255,255,.07);
+box-shadow: 0 40px 120px rgba(0,0,0,.8);
 }
 
 .phone-notch {
@@ -79,7 +79,7 @@ bottom: 0; left: 0; right: 0;
 height: 72px;
 background: rgba(13,27,42,.96);
 backdrop-filter: blur(12px);
-border-top: 1px solid rgba(255,255,255,.08);
+border-top: none;
 display: flex;
 align-items: center;
 justify-content: space-around;
@@ -140,7 +140,7 @@ border: 1.5px solid rgba(0,168,150,.4);
 background: var(--navy-card);
 border-radius: var(--radius);
 padding: 18px;
-border: 1px solid rgba(255,255,255,.06);
+border: none;
 }
 .card + .card { margin-top: 12px; }
 
@@ -191,7 +191,7 @@ font-size: 24px; font-weight: 700; margin: 0 auto 12px;
 .accordion-head {
 display: flex; align-items: center; justify-content: space-between;
 background: var(--navy-card); padding: 14px 18px; border-radius: var(--radius-sm);
-cursor: pointer; transition: var(--trans); border: 1px solid rgba(255,255,255,.06);
+cursor: pointer; transition: var(--trans); border: none;
 }
 .accordion-head:hover { background: var(--navy-light); }
 .accordion-head h3 { font-size: 14px; }
@@ -220,7 +220,7 @@ border-radius: 0 0 var(--radius-sm) var(--radius-sm);
 .tile {
 background: var(--navy-card); border-radius: var(--radius);
 padding: 16px 14px; cursor: pointer; transition: var(--trans);
-border: 1px solid rgba(255,255,255,.06);
+border: none;
 display: flex; flex-direction: column; gap: 8px;
 }
 .tile:hover { background: var(--navy-light); border-color: rgba(0,168,150,.3); transform: translateY(-2px); }
@@ -241,7 +241,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
 .search-box {
 display: flex; align-items: center; gap: 10px;
 background: var(--navy-card); border-radius: var(--radius-sm);
-padding: 12px 16px; border: 1px solid rgba(255,255,255,.08);
+padding: 12px 16px; border: none;
 margin-bottom: 14px;
 }
 .search-box span { color: var(--muted); }
@@ -251,7 +251,7 @@ margin-bottom: 14px;
 .member-card {
 background: var(--navy-card); border-radius: var(--radius);
 padding: 16px 18px; margin-bottom: 12px;
-border: 1px solid rgba(255,255,255,.06);
+border: none;
 }
 
 /* ── teal highlight box ── */
@@ -282,7 +282,7 @@ font-size: 22px;
 .input-label { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .5px; text-transform: uppercase; margin-bottom: 6px; }
 .input-field {
 width: 100%; background: var(--navy-card);
-border: 1.5px solid rgba(255,255,255,.08); border-radius: var(--radius-sm);
+border: none; border-radius: var(--radius-sm);
 padding: 13px 16px; color: var(--white); font-family: var(--font-body); font-size: 14px;
 outline: none; transition: var(--trans);
 }
@@ -292,7 +292,7 @@ outline: none; transition: var(--trans);
 /* ── textarea ── */
 .textarea-field {
 width: 100%; background: var(--navy-card);
-border: 1.5px solid rgba(255,255,255,.08); border-radius: var(--radius-sm);
+border: none; border-radius: var(--radius-sm);
 padding: 12px 16px; color: var(--white); font-family: var(--font-body); font-size: 14px;
 outline: none; resize: none; min-height: 72px; transition: var(--trans);
 }
@@ -331,7 +331,7 @@ transition: var(--trans); padding: 4px 0;
 .context-strip {
 background: var(--navy-mid); padding: 10px 20px;
 font-size: 12px; color: var(--muted);
-border-bottom: 1px solid rgba(255,255,255,.06);
+border-bottom: none;
 }
 .context-strip span { color: var(--teal); }
 
@@ -339,7 +339,7 @@ border-bottom: 1px solid rgba(255,255,255,.06);
 .demo-hint {
 position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
 background: rgba(0,0,0,.7); backdrop-filter: blur(10px);
-border: 1px solid rgba(255,255,255,.1); border-radius: 20px;
+border: none; border-radius: 20px;
 padding: 8px 16px; font-size: 12px; color: var(--muted);
 white-space: nowrap; pointer-events: none;
 animation: fadeIn .5s ease 1s both;
@@ -384,7 +384,7 @@ border: 1px solid rgba(0,168,150,.15);
 .onboard-card {
 background: var(--navy-card); border-radius: var(--radius);
 padding: 16px 18px; margin-bottom: 10px;
-border-left: 3px solid var(--teal);
+border-left: none;
 }
 .onboard-actions { padding: 20px 20px 0; }
 
@@ -398,7 +398,7 @@ border-left: 3px solid var(--teal);
 display: flex; align-items: center; gap: 12px;
 background: var(--navy-card); border-radius: var(--radius);
 padding: 14px 16px; cursor: pointer; transition: var(--trans);
-border: 1px solid rgba(255,255,255,.06); margin-bottom: 10px;
+border: none; margin-bottom: 10px;
 font-size: 14px; font-weight: 500; color: var(--white);
 }
 .quick-help-btn:hover { background: var(--navy-light); border-color: rgba(0,168,150,.3); }
@@ -428,7 +428,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <p class="muted">Log in om verder te werken aan slimme samenwerking binnen jouw team.</p>
    </div>
 
-```
+
 <div class="login-form">
  <div class="input-group">
    <div class="input-label">E-mailadres</div>
@@ -450,7 +450,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
 <div class="login-bottom">
  <p style="font-size:11px;color:var(--muted);">🔒 Veilig en persoonlijk — alleen toegankelijk voor jouw teamomgeving</p>
 </div>
-```
+
 
  </div>
 
@@ -540,7 +540,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      </div>
      <div class="sp16"></div>
 
-```
+
  <h4>Snelle acties</h4>
  <div class="sp8"></div>
  <div class="tile-grid">
@@ -603,7 +603,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -621,7 +621,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
        <p style="font-size:13px;color:var(--text);font-style:italic;">Je brengt graag beweging, denkt vooruit en zoekt snel naar praktische oplossingen.</p>
      </div>
 
-```
+
  <div class="accordion">
    <div class="accordion-head" onclick="toggleAccordion(this)">
      <h3>💪 Mijn sterke kanten</h3>
@@ -691,7 +691,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item active" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -713,7 +713,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      </div>
      <div class="sp12"></div>
 
-```
+
  <!-- Caroline -->
  <div class="member-card">
    <div class="row" style="margin-bottom:12px;">
@@ -764,7 +764,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -782,7 +782,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      </div>
      <div class="teal-line"></div>
 
-```
+
  <div class="card">
    <h4 style="font-size:11px;margin-bottom:8px;">✨ Zo komt Caroline het best tot haar recht</h4>
    <div class="chips" style="margin:0;">
@@ -819,7 +819,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -831,7 +831,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <h2>Samenwerken<br>met Caroline</h2>
      <div class="sp16"></div>
 
-```
+
  <div class="card">
    <h4 style="font-size:11px;margin-bottom:8px;">✅ Wat waarschijnlijk goed werkt</h4>
    <p style="font-size:13px;">Jij brengt tempo en richting, Caroline brengt zorgvuldigheid en scherpte. Samen kunnen jullie snelheid en kwaliteit combineren.</p>
@@ -868,7 +868,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -881,7 +881,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <p class="muted">Kies de situatie die het beste past</p>
      <div class="sp16"></div>
 
-```
+
  <div class="sit-card selected" id="sit1" onclick="selectSit('sit1')">🗣️ &nbsp; Ik wil iemand aanspreken</div>
  <div class="sit-card" id="sit2" onclick="selectSit('sit2')">🔄 &nbsp; Ik wil iets beter afstemmen</div>
  <div class="sit-card" id="sit3" onclick="selectSit('sit3')">💡 &nbsp; Ik wil feedback geven</div>
@@ -902,7 +902,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -917,7 +917,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <div class="sp16"></div>
      <div class="search-box"><span>🔍</span><p>Zoek op naam…</p></div>
 
-```
+
  <div class="member-card" onclick="selectMember(this)" style="cursor:pointer;border:1.5px solid var(--teal);background:var(--teal-glow);">
    <div class="row">
      <div class="avatar" style="background:linear-gradient(135deg,#5B8DD9,#3A6BC7);">C</div>
@@ -951,7 +951,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -966,7 +966,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <p class="muted">Selecteer alles wat past</p>
      <div class="sp16"></div>
 
-```
+
  <div class="chips" style="margin:0;">
    <div class="chip" onclick="this.classList.toggle('active')">1-op-1 gesprek</div>
    <div class="chip active" onclick="this.classList.toggle('active')">Met spanning</div>
@@ -989,7 +989,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -1004,7 +1004,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <h2>Jouw communicatieadvies</h2>
      <div class="sp12"></div>
 
-```
+
  <div class="card">
    <h4 style="font-size:11px;margin-bottom:8px;">🎯 Beste aanpak</h4>
    <p style="font-size:13px;">Begin met het gezamenlijke doel. Benoem concreet wat je ziet en welke zorg je hebt. Geef Caroline ruimte om haar perspectief toe te voegen voordat je een afspraak maakt.</p>
@@ -1049,7 +1049,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -1062,7 +1062,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <p class="muted">Dit hebben jullie met elkaar afgesproken in de workshop</p>
      <div class="sp16"></div>
 
-```
+
  <div class="card" style="cursor:pointer;" onclick="goTo('s15')">
    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;">
      <div style="flex:1;">
@@ -1106,7 +1106,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item active" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -1120,7 +1120,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <h2>We spreken verwachtingen expliciet uit</h2>
      <div class="teal-line"></div>
 
-```
+
  <div class="card">
    <h4 style="font-size:11px;margin-bottom:8px;">🧠 Waarom dit belangrijk is</h4>
    <p style="font-size:13px;">Onuitgesproken verwachtingen zorgen vaak voor ruis, frustratie en onnodige aannames.</p>
@@ -1161,7 +1161,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item active" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -1174,7 +1174,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <p class="muted">Dit kost ongeveer 1 minuut</p>
      <div class="sp16"></div>
 
-```
+
  <div class="card">
    <h3 style="font-size:13px;margin-bottom:10px;">Waar liep de samenwerking deze week goed?</h3>
    <textarea class="textarea-field" placeholder="Schrijf kort op…"></textarea>
@@ -1230,7 +1230,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item active" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
@@ -1243,7 +1243,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
      <p class="muted">Suggesties op basis van kwaliteiten en samenwerkingsvoorkeuren</p>
      <div class="sp16"></div>
 
-```
+
  <h4>Kies taaktype</h4>
  <div class="sp8"></div>
  <div class="tile-grid">
@@ -1298,7 +1298,7 @@ font-size: 14px; font-weight: 500; color: var(--white);
  <div class="nav-item" onclick="goTo('s14')"><span class="nav-icon">📋</span><span class="nav-label">Afspraken</span></div>
  <div class="nav-item" onclick="goTo('s6')"><span class="nav-icon">👤</span><span class="nav-label">Profiel</span></div>
 </div>
-```
+
 
  </div>
 
